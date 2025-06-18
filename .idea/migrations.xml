@@ -3,7 +3,11 @@
   <component name="ProjectMigrations">
     <option name="MigrateToGradleLocalJavaHome">
       <set>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/You--master" />
+=======
+        <option value="$PROJECT_DIR$" />
+>>>>>>> 57f160c0b5825ea5264f5cf22699763430008dea
       </set>
     </option>
   </component>

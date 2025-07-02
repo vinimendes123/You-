@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Botão de voltar (seta) -->
+    <ImageButton
+        android:id="@+id/btnVoltar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:contentDescription="Voltar"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Imagem da postura -->
+    <ImageView
+        android:id="@+id/imgPose"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Imagem da postura"
+        app:layout_constraintTop_toBottomOf="@id/btnVoltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        android:scaleType="fitCenter"/>
+
+    <!-- Nome da postura -->
+    <TextView
+        android:id="@+id/tvPoseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Postura da Montanha"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imgPose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Instruções -->
+    <TextView
+        android:id="@+id/tvInstructions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Fique em pé com os pés juntos, coluna reta, e respire fundo."
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvPoseName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Timer -->
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvInstructions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Botão próxima postura -->
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Próxima Postura"
+        app:layout_constraintTop_toBottomOf="@id/tvTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/blue"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
